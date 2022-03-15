@@ -1,0 +1,24 @@
+# This profil runs a small test after installation.
+# (Write permission is required to write results 'mess', 'resu', 'erre')
+#
+P actions make_etude
+P version STA9.1
+P debug nodebug
+A rep_mat %code_pathname%/STA9.1/materiau
+A rep_outils %code_pathname%/outils
+
+P mode batch
+
+# parameters
+P ncpus 1
+A memjeveux 8.0
+A tpmax 60
+
+# data files
+F comm %work_parent%/%jobdir_name%%job%/%job_name%.comm D 1
+F msh  %work_parent%/%jobdir_name%%job%/%job_name%.msh  D 19
+
+# results files
+F mess %work_parent%/%jobdir_name%%job%/%job_name%.mess R 6
+F resu %work_parent%/%jobdir_name%%job%/%job_name%.resu R 8
+F erre %work_parent%/%jobdir_name%%job%/%job_name%.erre R 9
