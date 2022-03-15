@@ -31,6 +31,6 @@ The latest version of FERUM is available from https://www.sigma-clermont.fr/en/f
 
 Originally developed at the University of California, Berkeley. Initiated by Terje Haukaas and Armen Der Kiureghian. http://projects.ce.berkeley.edu/ferum/
 
-The scripts in this repo have been developed during my time at:
+The changes have been made during my (@rozsasarpi) time at:
 * Structural Reliability Department, Building and Construction Research,  [TNO](https://www.tno.nl/en/). **(2016 - 2022)**
 * [Department of Structural Engineering](http://hsz.bme.hu/?language=en), Budapest University of Technology and Economics  . **(2014 - 2016)**
