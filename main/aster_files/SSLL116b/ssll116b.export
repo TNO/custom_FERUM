@@ -1,0 +1,24 @@
+# This profil runs a small test after installation.
+# (Write permission is required to write results 'mess', 'resu', 'erre')
+#
+P actions make_etude
+P version STA8.3
+P debug nodebug
+A rep_mat C:/aster/STA8.3/materiau
+A rep_outils C:/aster/outils
+
+P mode batch
+
+# parameters
+P ncpus 1
+A memjeveux 8.0
+A tpmax 60
+
+# data files
+F comm C:/temp/aster/seq1/execdir/exec1/ssll116b.comm D 1
+F msh  C:/temp/aster/seq1/execdir/exec1/ssll116b.msh D 19
+
+# results files
+F mess C:/temp/aster/seq1/execdir/exec1/ssll116b.mess R 6
+F resu C:/temp/aster/seq1/execdir/exec1/ssll116b.resu R 8
+F erre C:/temp/aster/seq1/execdir/exec1/ssll116b.erre R 9
