@@ -5,10 +5,13 @@ function [ subtempu, I_eval, newG, ratio ] = subset_MCMC(simu,width,rand_generat
 
 
 switch rand_generator
-   case 0
-      subtempu = rand(size(simu));
-   otherwise
-      subtempu = twister(size(simu));
+    case 0
+        subtempu = rand(size(simu));
+    otherwise
+        % modern MATLAB has Mersenne Twister for generating pseudo
+        % random numbers so we use that (FERUM's Twister throws an
+        % error), `rand`'s default is the Twister algorithm
+        subtempu = rand(size(simu));
 end
 subtempu = simu + ( (subtempu*width) - width/2 );
 
@@ -19,10 +22,13 @@ ratio(I) = 1;
 
 
 switch rand_generator
-   case 0
-      test_unif = rand(size(subtempu)) >= ratio;
-   otherwise
-      test_unif = twister(size(subtempu)) >= ratio;
+    case 0
+        test_unif = rand(size(subtempu)) >= ratio;
+    otherwise
+        % modern MATLAB has Mersenne Twister for generating pseudo
+        % random numbers so we use that (FERUM's Twister throws an
+        % error), `rand`'s default is the Twister algorithm
+        test_unif = rand(size(subtempu)) >= ratio;
 end
 
 
